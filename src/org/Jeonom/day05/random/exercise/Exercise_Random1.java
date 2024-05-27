@@ -21,7 +21,10 @@ public class Exercise_Random1 {
 //			int num = rand.nextInt(2)+1; // 1 ~ 2 사이의 랜덤한 수
 			
 			if (choice == -1) break;
-			if (choice == num) {
+			else if (choice != 1 || choice != 2) {
+				System.out.print("1 또는 2를 입력해주세요!");
+			}
+			else if (choice == num) {
 				System.out.print("맞췄습니다.");
 			}
 			else {

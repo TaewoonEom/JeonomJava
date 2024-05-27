@@ -9,6 +9,7 @@ public class Exam_Random {
 //		for(int i = 0; i < 10; i++) {
 		int num = rand.nextInt(10);
 		System.out.print(num + " ");
+		System.out.println();
 //		}
 		// 25부터 35 사이의 랜덤한 수를 출력하시오
 		// rand.nextInt(11) + 25 // 25 ~ 35
@@ -27,7 +28,7 @@ public class Exam_Random {
 			int randNum = (int)(Math.random()*10); // 0 ~ 9 사이의 값
 //			(int)(Math.random()*10)+1 // 1 ~ 10 사이의 값
 //			(int)(Math.random()*11)+25 // 25 ~ 35 사이의 값
-			System.out.println(randNum);
+			System.out.print(randNum + " ");
 		}
 		
 	}
