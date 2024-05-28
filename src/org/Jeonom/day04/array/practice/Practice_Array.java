@@ -230,7 +230,6 @@ public class Practice_Array {
 //		치킨 이름을 입력하세요 : 양념 치킨 이름을 입력하세요 : 불닭
 //		양념치킨 배달 가능 불닭치킨은 없는 메뉴입니다.
 		Scanner sc = new Scanner(System.in);
-		
 		String menu[] = {"황금올리브", "뿌링클", "허니콤보", "고추바사삭", "맵슐랭"};
 		
 		while(true) {
@@ -288,27 +287,30 @@ public class Practice_Array {
 //		ex.
 //		3 4 15 17 28 40
 		int ranNums[] = new int[6];
-		int ranNum = 0;
 		
-		// 랜덤값을 배열에 넣음
-		for(int i = 0; i < ranNums.length; i++) {
-			ranNum = (int)(Math.random()*45)+1;
-			ranNums[i] = ranNum;
-		}
-		// 배열의 값을 비교-> 중복값 제거 -> 정렬 -> 출력
-		for(int i = 1; i <ranNums.length; i++) {
-			for(int j = i; j >= i; j--)
-			if (ranNums[j-1] == ranNums[j]) {
-				ranNums[j] = (int)(Math.random()*45)+1;
-				j++;
+		// 난수를 배열에 넣음(중복값 제거)
+		for(int i = 1; i <= ranNums.length; i++) {
+			ranNums[i-1] = (int)(Math.random()*45)+1;
+			if(i == 6) break;
+			if(ranNums[i-1] == ranNums[i]) {
+				i--;
 			}
-		}
-		for(int i = 0; i < ranNums.length; i++) {
-		System.out.print(ranNums[i] + " ");
 		}
 		
 		// 오름차순 정렬
-		// System.out.print(ranNum + " ");
+		for(int i = 1; i < ranNums.length; i++) {
+			for(int j = i; j >= 1; j--) {
+				if (ranNums[j-1] > ranNums[j]) {
+				int temp = ranNums[j];
+				ranNums[j] = ranNums[j-1];
+				ranNums[j-1] = temp;
+				}
+			}
+		}
+		// 배열 출력
+		for(int number : ranNums) {
+			System.out.print(number + " ");				
+		}
 	}
 	public void practice12() {
 		// 12번
