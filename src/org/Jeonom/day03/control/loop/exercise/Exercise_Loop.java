@@ -345,9 +345,13 @@ public class Exercise_Loop {
 					System.out.print(i + " ");
 				} else if (i % 2 != 0 && i % 3 != 0 && i % 5 != 0 && i % 7 != 0) {
 					System.out.print(i + " ");
-				} else continue;
+				} else continue; // continue문은 반복문을 빠져나가지 않고 다음 반복을 진행
+								 // 소수가 아닐경우 count++ 작동 안함
+				count++;
 			}
 		}
+		System.out.println();
+		System.out.println("소수의 개수 : " + count);
 	}
 	public void While1() {
 		// While문을 이용하여 1 ~ 100 사이의 홀수의 합을 출력하시오

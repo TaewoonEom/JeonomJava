@@ -6,14 +6,14 @@ public class Practice_Array {
 	
 	public void practice1() {
 		// 1번
-				// 길이가 10인 배열을 선언하고 1부터 10까지의 값을 반복문을 이용하여
-				// 순서대로 배열 인덱스에 넣은 후 그 값을 출력하세요.
-				int array[] = new int[10];
-				
-				for(int i = 0; i < 10; i++) {
-					array[i] = i+1;
-					System.out.print(array[i] + " ");
-				}
+		// 길이가 10인 배열을 선언하고 1부터 10까지의 값을 반복문을 이용하여
+		// 순서대로 배열 인덱스에 넣은 후 그 값을 출력하세요.
+		int array[] = new int[10];
+		
+		for(int i = 0; i < 10; i++) {
+			array[i] = i+1;
+			System.out.print(array[i] + " ");
+		}
 	}
 	public void practice2() {
 		// 2번
@@ -289,11 +289,12 @@ public class Practice_Array {
 		int ranNums[] = new int[6];
 		
 		// 난수를 배열에 넣음(중복값 제거)
-		for(int i = 1; i <= ranNums.length; i++) {
-			ranNums[i-1] = (int)(Math.random()*45)+1;
-			if(i == 6) break;
-			if(ranNums[i-1] == ranNums[i]) {
-				i--;
+		for(int i = 0; i < ranNums.length; i++) {
+			ranNums[i] = (int)(Math.random()*45)+1;
+			for(int j = 0; j < i; j++) {
+				if(ranNums[i] == ranNums[j]) {
+					i--;
+				}
 			}
 		}
 		
@@ -326,21 +327,34 @@ public class Practice_Array {
 		String input = sc.next();
 		int size = input.length();
 		char words[] = new char[size];
-		int count = 0;
+		int count = size;
 		
+		// 입력받은 문자열에 있는 문자 모두 출력
 		System.out.print("문자열에 있는 문자 : ");
 		for (int i = 0; i < size; i++) {
 			words[i] = input.charAt(i);
 			if (i == size - 1) {
 				System.out.println(words[i]);
-			}
-			else {
+			} else {
 				System.out.print(words[i] + ", ");
 			}
-			
-			count++;
+			for(int j = 0; j < i; j++) {  // 문자 출력 for문과 중복값빼는 for문 합침
+				if(words[i] == words[j]) {
+					count--;
+				}
+			}
 		}
+		System.out.println("문자 개수 : " + count);
 		
-		// 문자 개수에서 중복된 문자를 제외하는 법을 모르겠음
+		// 입력받은 문자열을 배열에 한 문자씩 넣고 중복값이 있으면 count-1
+//		for(int i = 0; i < size; i++) {
+//			words[i] = input.charAt(i);
+//			for(int j = 0; j < i; j++) {
+//				if(words[i] == words[j]) {
+//					count--;
+//				}
+//			}
+//		}
+		
 	}
 }
