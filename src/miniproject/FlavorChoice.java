@@ -2,7 +2,7 @@ package miniproject;
 
 import java.util.Scanner;
 
-public class Flavorchoice {
+public class FlavorChoice {
 	
 	public int firstFlavor() {
 		Scanner sc = new Scanner(System.in);
@@ -12,7 +12,6 @@ public class Flavorchoice {
 		System.out.println("2. 고소한맛");
 		System.out.println("3. 쌉쌀한맛");
 		System.out.println("4. 단맛");
-		System.out.println("0. 프로그램 종료");
 		System.out.print("선택 : ");
 		return sc.nextInt();
 	}
