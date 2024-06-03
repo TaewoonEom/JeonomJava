@@ -20,7 +20,6 @@ public class Run {
 					view.sendMessage("===== 회원전용 기능입니다.=====\n=== 회원가입 후 이용해주세요! === ");
 					break;
 				}else
-				member = view.getMember();
 				if(member != null) {
 					int firstChoice = flavor.firstFlavor(); // 첫번째 맛 선택
 					int secondChoice = flavor.secondFlavor(); // 두번째 맛 선택

@@ -15,6 +15,7 @@ public class FlavorChoice {
 		System.out.print("선택 : ");
 		return sc.nextInt();
 	}
+	
 	public int secondFlavor() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("============================");

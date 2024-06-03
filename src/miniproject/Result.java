@@ -48,6 +48,7 @@ public class Result {
 			break;
 		}
 	}
+	
 	public void secondNutty(int secondChoice) {
 		switch(secondChoice) {
 		case 1 :
@@ -62,7 +63,7 @@ public class Result {
 			System.out.println("'고소한맛'을 1순위, '쌉쌀한맛'을 2순위로 선택하셨습니다.");
 			System.out.println("'레트로 브라비'를 추천합니다~!");
 			System.out.println("레트로 브라비는 누룽지의 고소한맛과 혀끝에 남는 스모키함이\n"
-					+ "풍미를 더해주는 진한 구수함이 느껴지는 원두니다. 레트로는...");
+					+ "풍미를 더해주는 진한 구수함이 느껴지는 원두입니다. 레트로는...");
 			break;
 		case 4 : 
 			System.out.println("============================");
@@ -73,6 +74,7 @@ public class Result {
 			break;
 		}
 	}
+	
 	public void thirdBitter(int secondChoice) {
 		switch(secondChoice) {
 		case 1 :
@@ -93,11 +95,12 @@ public class Result {
 			System.out.println("============================");
 			System.out.println("'쌉쌀한맛'을 1순위, '단맛'을 2순위로 선택하셨습니다.");
 			System.out.println("'시티 브라운'을 추천합니다~!");
-			System.out.println("시티 브라운은 다크 초콜릿의 쌉쌀한 맛과 브라운 슈가의 단맛이"
+			System.out.println("시티 브라운은 다크 초콜릿의 쌉쌀한 맛과 브라운 슈가의 단맛이\n"
 					+ "균형잡힌 원두입니다. 거기에 가벼운 산미까지 다채로운 맛을 지녔습니다. 시티 브라운은...");
 			break;
 		}
 	}
+	
 	public void fourthSweet(int secondChoice) {
 		switch(secondChoice) {
 		case 1 :

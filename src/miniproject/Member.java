@@ -8,10 +8,6 @@ public class Member {
 	
 	public Member() {}
 	
-	public Member(String memberName) {
-		this.memberName = memberName;
-	}
-	
 	public Member(String memberId, String memberPw, String memberName, String memberPhone) {
 		super();
 		this.memberId = memberId;
@@ -54,7 +50,7 @@ public class Member {
 
 	@Override
 	public String toString() {
-		return "가입자 정보 [ID = " + memberId + ", PW = " + memberPw + ", 이름 = " + memberName
+		return "가입자 정보 [아이디 = " + memberId + ", 비밀번호 = " + memberPw + ", 이름 = " + memberName
 				+ ", 전화번호 = " + memberPhone + "]";
 	}
 

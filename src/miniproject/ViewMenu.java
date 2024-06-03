@@ -31,7 +31,6 @@ public class ViewMenu {
 		String memberName = sc.next();
 		System.out.print("전화번호 : ");
 		String memberPhone = sc.next();
-		Member name = new Member(memberName);
 		member = new Member(memberId, memberPw, memberName, memberPhone);
 		return member;
 	}
@@ -50,7 +49,8 @@ public class ViewMenu {
 	public void sendMessage(String msg) {
 		System.out.println(msg);
 	}
-
+	
+	// 가입자 정보
 	public void printMember(Member member) {
 		System.out.println("====== 가입자 정보 ======");
 		if(member != null) {
