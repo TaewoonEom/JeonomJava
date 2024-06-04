@@ -10,7 +10,7 @@ public class Exam_MapCollection {
 
 	public static void main(String[] args) {
 		// Collection -> 저장소
-		// 자료구조의 특서에 따라서 선택해서 사용
+		// 자료구조의 특성에 따라서 선택해서 사용
 		// List, Set, Map, Stack, Queue, ...
 		// Map에는 Key가 있고 이것은 고유한 값, 중복 X
 		// Value가 있고 Key에 매핑되는 값임.
@@ -39,7 +39,7 @@ public class Exam_MapCollection {
 		String name = sc.next();
 		System.out.print("연봉 : ");
 		long salary = sc.nextLong();
-		// slalry = 233l;
+		// salary = 233l;
 		System.out.println("재직여부(true/false) : ");
 		boolean isWorking = sc.hasNextBoolean();
 		
