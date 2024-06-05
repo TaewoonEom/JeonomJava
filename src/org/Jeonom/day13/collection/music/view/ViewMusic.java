@@ -43,7 +43,8 @@ public class ViewMusic {
 
 	public String inputTitle(String category) {
 		System.out.print(category + "할 곡명 입력 : ");
-		return sc.next();
+		String title = sc.next();
+		return title;
 	}
 
 	public void getMusicInfo(List<Music> mList) {
@@ -60,6 +61,7 @@ public class ViewMusic {
 	}
 
 	public Music modifyMusic(Music music) {
+		sc.nextLine();
 		System.out.print("수정할 곡명 입력 : ");
 		music.setTitle(sc.nextLine());
 		System.out.print("수정할 가수명 입력 : ");

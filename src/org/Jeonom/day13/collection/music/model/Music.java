@@ -1,11 +1,12 @@
 package org.Jeonom.day13.collection.music.model;
 
-public class Music {
-	// 곡명 가수명
+public class Music implements Comparable<Music> {
+	// 곡명 title, 가수명 singer
 	private String title;
 	private String singer;
 	
 	public Music() {}
+	
 	public Music(String title, String singer) {
 		super();
 		this.title = title;
@@ -32,7 +33,12 @@ public class Music {
 	public String toString() {
 		return "Music [title=" + title + ", singer=" + singer + "]";
 	}
-	
+
+	@Override
+	public int compareTo(Music o) {
+		// TODO Auto-generated method stub
+		return this.title.compareTo(o.getTitle());
+	}
 	
 	
 }

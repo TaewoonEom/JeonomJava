@@ -39,10 +39,10 @@ public class MusicApp {
 				case 4: // 특정 곡 검색
 					title = view.inputTitle("검색");
 					List<Music> muList = mng.searchMusicByTitle(title);
-					if(muList != null) {
-						view.getMusicInfo(muList);
-					}else {
+					if(muList == null) {
 						view.displayMsg("검색 결과가 없습니다.");
+					}else {
+						view.getMusicInfo(muList);
 					}
 					break;
 				case 5: // 특정 곡 삭제
@@ -60,12 +60,16 @@ public class MusicApp {
 					mng.searchModifyMusic((int) result.get("index"), msc);
 					break;
 				case 7: // 곡명 오름차순 정렬
+					mng.sortByTitleASC();
 					break;
 				case 8: // 곡명 내림차순 정렬
+					mng.sortByTitleDESC();
 					break;
 				case 9: // 가수명 오름차순 정렬
+					mng.sortBySingerASC();
 					break;
 				case 10: // 가수명 내림차순 정렬
+					mng.sortBySingerDESC();
 					break;
 				case 0: // 종료
 					view.displayMsg("프로그램을 종료합니다.");

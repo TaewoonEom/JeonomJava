@@ -19,7 +19,31 @@ public class ManageStudent implements ManageInterface {
 	}
 
 	@Override
-	public List<Student> searchOneByName(String name) {
+	public void modifyStudent(int index, Student student) {
+		sList.set(index, student);
+		
+	}
+
+	@Override
+	public void deleteStudent(int index) {
+		sList.remove(index);
+	}
+
+	@Override
+	public Student searchOneByName(String name) {
+		if(name != null) {
+			// 반복문 안에서 초기화를 할 경우 이름이 같은 사람이 있어도
+			// 1명만 반환되기 때문에 반복문 밖에서 초기화한다.
+			for(Student std : sList) {
+				if(name.equals(std.getName())) {
+					return std;
+				}
+			}
+		}
+		return null;
+	}
+	
+	public List<Student> searchListByName(String name) {
 		if(name != null) {
 			// 반복문 안에서 초기화를 할 경우 이름이 같은 사람이 있어도
 			// 1명만 반환되기 때문에 반복문 밖에서 초기화한다.
@@ -40,17 +64,6 @@ public class ManageStudent implements ManageInterface {
 			return null;
 		}
 		return sList;
-	}
-
-	@Override
-	public void modifyStudent(int index, Student student) {
-		sList.set(index, student);
-		
-	}
-
-	@Override
-	public void deleteStudent(int index) {
-		sList.remove(index);
 	}
 
 	public Map<String, Object> searchModifyStudent(String name) {
@@ -84,5 +97,4 @@ public class ManageStudent implements ManageInterface {
 		return 0;
 	}
 
-	
 }
